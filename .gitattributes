@@ -1,0 +1,19 @@
+# 默认自动识别文本文件，仓库内统一使用 LF
+* text=auto
+
+# 源码与工程文件保持 CRLF，避免 Keil 打开时出现全文件差异
+*.c        text eol=crlf
+*.h        text eol=crlf
+*.s        text eol=crlf
+*.bat      text eol=crlf
+*.uvprojx  text eol=crlf
+*.uvoptx   text eol=crlf
+*.dbgconf  text eol=crlf
+
+# 二进制文件不做任何转换
+*.o    binary
+*.crf  binary
+*.axf  binary
+*.lib  binary
+*.hex  binary
+*.bin  binary

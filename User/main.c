@@ -1,4 +1,4 @@
-#include "stm32f10x.h"                  // Device header
+ï»¿#include "stm32f10x.h"                  // Device header
 #include "OLED.h"
 #include "Timer.h"
 #include "Key.h"
@@ -11,8 +11,8 @@
 uint8_t key_num,KEY;
 uint8_t Flage;
 uint8_t SendFlag,tastdadt;
-uint16_t LA,LB,LC,LD;//½ÓÊÕÊý¾Ý
-int8_t LAA,LBB,LCC,LDD;//´¦ÀíÍêµÄÊý¾Ý
+uint16_t LA,LB,LC,LD;//æŽ¥æ”¶æ•°æ®
+int8_t LAA,LBB,LCC,LDD;//å¤„ç†å®Œçš„æ•°æ®
 
 int8_t DataProcess(uint16_t ADvaul);
 
@@ -32,7 +32,7 @@ int main(void)
 			KEY=key_num;
 			
 		}
-//´¦ÀíÊý¾Ý
+//å¤„ç†æ•°æ®
 		LA=ad_ww[0];
 		LB=ad_ww[1];
 		LC=ad_ww[2];
@@ -42,7 +42,7 @@ int main(void)
 		LBB=DataProcess(LB);
 		LCC=DataProcess(LC);
 		LDD=DataProcess(LD);
-//·¢ËÍÊý¾Ý		
+//å‘é€æ•°æ®		
 		if(Flage)
 		{
 			NRF24L01_TxPacket[0]=0x00;
@@ -121,7 +121,7 @@ void TIM1_UP_IRQHandler(void)//1ms
 		}
 		if(j>=5000)
 		{
-			Open();//¶¨Ê±¿ª»ú·ÀÖ¹tp4336½øÈëµÍ¹¦ºÄ
+			Open();//å®šæ—¶å¼€æœºé˜²æ­¢tp4336è¿›å…¥ä½ŽåŠŸè€—
 			j=0;
 			
 		}
