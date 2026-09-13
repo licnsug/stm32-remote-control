@@ -1,0 +1,30 @@
+# Keil MDK 编译输出
+Objects/
+Listings/
+*.o
+*.crf
+*.d
+*.dep
+*.axf
+*.lnp
+*.iex
+*.sct
+*.map
+*.lst
+*.htm
+*.build_log.htm
+*.bak
+*.__i
+JLinkLog.txt
+
+# Keil 用户界面布局 / 调试器本地设置
+*.uvguix.*
+*.uvopt
+
+# 编辑器与系统临时文件
+*.orig
+*.rej
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
